@@ -19,7 +19,7 @@ import {
   Waves,
 } from "lucide-react";
 
-import { getLocalSession, saveLocalSession, supabase } from "./supabaseClient.js";
+import { saveLocalSession, supabase } from "./supabaseClient.js";
 export { getSession, clearSession } from "./supabaseClient.js";
 
 import loginVideo from "../WhatsApp Video 2026-05-15 at 2.00.21 AM.mp4";
@@ -115,11 +115,15 @@ export default function LoginPage() {
     let mounted = true;
 
     supabase.auth.getSession().then(({ data }) => {
-      if (mounted && (data.session || getLocalSession())) navigate("/analysis", { replace: true });
+      if (mounted && data.session && window.location.hash.includes("access_token")) {
+        navigate("/analysis", { replace: true });
+      }
     });
 
     const { data } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (session) navigate("/analysis", { replace: true });
+      if (session && window.location.hash.includes("access_token")) {
+        navigate("/analysis", { replace: true });
+      }
     });
 
     return () => {
