@@ -1,0 +1,30 @@
+# Node / frontend
+node_modules/
+dist/
+npm-debug.log*
+
+# Python / backend
+backend/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local caches
+.pip-cache/
+.pip-tmp/
+.uv-cache/
+
+# Runtime files
+backend/uploads/
+*.log
+vite-dev.log
+backend/backend-api.log
+
+# Large local datasets
+dataset/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

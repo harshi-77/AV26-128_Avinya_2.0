@@ -1,0 +1,88 @@
+{
+  "modality_key": "xray",
+  "labels": [
+    "Forearm",
+    "Hand",
+    "LegFOOT",
+    "LegKNEE"
+  ],
+  "architecture": "resnet18",
+  "image_size": 160,
+  "best_val_accuracy": 0.9388888888888889,
+  "best_epoch": 7,
+  "dataset_dir": "C:\\Users\\Harshith Kumar\\OneDrive\\Desktop\\Predictive analytics for disease outbreaks\\dataset\\x-ray\\balanced_train",
+  "train_samples": 900,
+  "valid_samples": 180,
+  "test_samples": 120,
+  "training_seconds": 121.01,
+  "version": "1.1.0",
+  "task": "balanced_xray_region_classifier",
+  "validation_metrics": {
+    "accuracy": 0.9388888888888889,
+    "classification_report": {
+      "Forearm": {
+        "precision": 0.8947368421052632,
+        "recall": 0.8717948717948718,
+        "f1-score": 0.8831168831168831,
+        "support": 39.0
+      },
+      "Hand": {
+        "precision": 0.98,
+        "recall": 0.9607843137254902,
+        "f1-score": 0.9702970297029703,
+        "support": 51.0
+      },
+      "LegFOOT": {
+        "precision": 0.9767441860465116,
+        "recall": 0.9767441860465116,
+        "f1-score": 0.9767441860465116,
+        "support": 43.0
+      },
+      "LegKNEE": {
+        "precision": 0.8979591836734694,
+        "recall": 0.9361702127659575,
+        "f1-score": 0.9166666666666666,
+        "support": 47.0
+      },
+      "accuracy": 0.9388888888888889,
+      "macro avg": {
+        "precision": 0.9373600529563111,
+        "recall": 0.9363733960832078,
+        "f1-score": 0.9367061913832578,
+        "support": 180.0
+      },
+      "weighted avg": {
+        "precision": 0.9393267693042129,
+        "recall": 0.9388888888888889,
+        "f1-score": 0.9389446682763514,
+        "support": 180.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        34,
+        1,
+        0,
+        4
+      ],
+      [
+        2,
+        49,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        42,
+        1
+      ],
+      [
+        2,
+        0,
+        1,
+        44
+      ]
+    ]
+  }
+}

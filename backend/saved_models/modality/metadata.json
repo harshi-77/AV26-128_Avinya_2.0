@@ -1,0 +1,14 @@
+{
+  "modality_key": "modality",
+  "labels": [
+    "xray",
+    "mri",
+    "ctscan"
+  ],
+  "architecture": "resnet18",
+  "image_size": 128,
+  "best_val_accuracy": 0.9540598290598291,
+  "dataset_size": 6244,
+  "training_seconds": 32.57,
+  "version": "1.0.0"
+}
